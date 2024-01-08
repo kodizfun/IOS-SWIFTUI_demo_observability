@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ScreenB: View {
-    
-    @EnvironmentObject var clientCart: Cart
-    
+        
     var body: some View {
         ZStack {
             Color.green
@@ -28,5 +26,5 @@ struct ScreenB: View {
 }
 
 #Preview {
-    ScreenB().environmentObject(Cart())
+    ScreenB()
 }

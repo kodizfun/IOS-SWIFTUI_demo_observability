@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ScreenA: View {
-    @EnvironmentObject var clientCart: Cart
     
     var body: some View {
         ZStack {
@@ -16,13 +15,13 @@ struct ScreenA: View {
             VStack {
                 Text("A").font(.system(size: 200))
                 Text("Ajouter au panier").padding()
-                Text(clientCart.quantity.description).padding()
+                Text("0").padding()
                 HStack {
                     Button("-") {
-                        clientCart.quantity -= 1
+                        
                     }
                     Button("+") {
-                        clientCart.quantity += 1
+                        
                     }
                 }.font(.largeTitle)
                 
@@ -37,5 +36,5 @@ struct ScreenA: View {
 }
 
 #Preview {
-    ScreenA().environmentObject(Cart())
+    ScreenA()
 }

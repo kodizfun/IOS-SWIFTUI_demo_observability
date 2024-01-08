@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct CartComponent: View {
-    
-    @EnvironmentObject var clientCart: Cart
-    
+        
     var body: some View {
         VStack {
             Text("Mon panier").font(.title)
-            Text("\(clientCart.quantity.description) article(s)")
+            Text("0 article(s)")
         }
         .padding()
         .background(Color.black)
@@ -25,5 +23,5 @@ struct CartComponent: View {
 }
 
 #Preview {
-    CartComponent().environmentObject(Cart())
+    CartComponent()
 }
